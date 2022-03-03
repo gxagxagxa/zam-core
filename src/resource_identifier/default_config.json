@@ -1,0 +1,128 @@
+{
+  "ZAM_SITE": null,
+  "ZAM_FILE_SYSTEM": null,
+  "ZAM_USER": null,
+  "ZAM_OS_PLATFORM": null,
+  "ZAM_CORE_API_VERSION": "v1",
+  "ZAM_RESOURCE_IDENTIFIER_FULL_URL": "api{zam_core_api_version}://[{site}]{resource}",
+  "ZAM_ASSET_TYPES": [
+    "chr",
+    "cpt",
+    "cfx",
+    "mdl"
+  ],
+  "ZAM_RESOURCE_IDENTIFIER_SYNTAX": {
+    "name": "resource_id",
+    "regex": "^(api(\\w+):\\/\\/)?(\\[[^\\s\\@\\:]+\\])?([\\w\\d\\-\\{\\}\\*\\.]+)(:[\\w\\d\\-\\{\\}\\*\\.]+)?(:[\\w\\d\\-\\{\\}\\*\\.]+)?(@[\\w\\d\\-\\{\\}\\*\\.]+)?((\\/[^@:\\/\\[\\]\\s\\#]+)+)?((#[^@:\\/\\{\\}\\s\\#]+)+)?$",
+    "component_mappings": [
+      {
+        "name": "schema",
+        "regex": null,
+        "component_mappings": null
+      },
+      {
+        "name": "schema_version",
+        "regex": null,
+        "component_mappings": null
+      },
+      {
+        "name": "site",
+        "regex": "\\[([^\\s\\@\\:]+)\\]",
+        "component_mappings": [
+          { "name": "site", "regex": null, "component_mappings": null }
+        ]
+      },
+      {
+        "name": "product",
+        "regex": "([\\da-zA-Z\\*\\-]+)?(_)?([\\da-zA-Z\\*\\-]+)?(_)?([\\da-zA-Z\\*\\-]+)?(_)?([\\da-zA-Z\\*\\-]+)?",
+        "component_mappings": [
+          {
+            "name": "product_part_01",
+            "regex": null,
+            "component_mappings": null
+          },
+          {},
+          {
+            "name": "product_part_02",
+            "regex": null,
+            "component_mappings": null
+          },
+          {},
+          {
+            "name": "product_part_03",
+            "regex": null,
+            "component_mappings": null
+          },
+          {},
+          {
+            "name": "product_part_04",
+            "regex": null,
+            "component_mappings": null
+          }
+        ]
+      },
+      {
+        "name": "pipeline_step",
+        "regex": ":([\\w\\d\\-\\{\\}\\*\\.]+)",
+        "component_mappings": [
+          { "name": "pipeline_step", "regex": null, "component_mappings": null }
+        ]
+      },
+      {
+        "name": "artist",
+        "regex": ":([\\w\\d\\-\\{\\}\\*\\.]+)",
+        "component_mappings": [
+          { "name": "artist", "regex": null, "component_mappings": null }
+        ]
+      },
+      {
+        "name": "full_version",
+        "regex": "@([vV])([\\d]+)?(\\.)?([\\d]+)?(\\.)?([\\d]+)?",
+        "component_mappings": [
+          {
+            "name": "version_letter",
+            "regex": null,
+            "component_mappings": null
+          },
+          {
+            "name": "client_version",
+            "regex": null,
+            "component_mappings": null
+          },
+          {},
+          {
+            "name": "publish_version",
+            "regex": null,
+            "component_mappings": null
+          },
+          {},
+          {
+            "name": "work_version",
+            "regex": null,
+            "component_mappings": null
+          }
+        ]
+      },
+      {
+        "name": "sub_path",
+        "regex": null,
+        "component_mappings": null
+      },
+      {
+        "name": "last_path",
+        "regex": null,
+        "component_mappings": null
+      },
+      {
+        "name": "tags",
+        "regex": null,
+        "component_mappings": null
+      },
+      {
+        "name": "last_tag",
+        "regex": null,
+        "component_mappings": null
+      }
+    ]
+  }
+}
